@@ -6,6 +6,7 @@ import {notFound} from "next/navigation";
 export default function MealDetails({params}) {
 
     const meal = getMeal(params.slug)
+
     meal.instructions = meal.instructions.replace(/\n/g, '<br/>');
 
     if (!meal) {
